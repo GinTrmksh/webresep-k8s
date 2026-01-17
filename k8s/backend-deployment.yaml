@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: abdisopan/webresep-backend:latest
+          image: abdisopan/webresep-backend:8841b074b9efb925d695e67871fd145859335382
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
