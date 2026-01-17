@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: abdisopan/webresep-frontend:latest
+          image: abdisopan/webresep-frontend:8841b074b9efb925d695e67871fd145859335382
           imagePullPolicy: Always
           ports:
             - containerPort: 3010
