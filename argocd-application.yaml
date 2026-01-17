@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: webresep
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/GinTrmksh/webresep-k8s.git
+    targetRevision: main
+    path: k8s
+  
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  
+  syncPolicy:
+    automated:
+      prune: true        # Auto delete resources jika dihapus dari git
+      selfHeal: true     # Auto sync jika ada perubahan manual di cluster
